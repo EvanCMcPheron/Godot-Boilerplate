@@ -1,0 +1,62 @@
+[gd_scene format=2]
+
+[node name="AdvancedSearch" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 3
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_right = 1920.0
+margin_bottom = 1056.0
+size_flags_vertical = 3
+
+[node name="Scene List" type="VBoxContainer" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+size_flags_vertical = 3
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Scene List"]
+unique_name_in_owner = true
+margin_right = 1912.0
+margin_bottom = 24.0
+placeholder_text = "Filter by Text"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Scene List"]
+margin_top = 28.0
+margin_right = 1912.0
+margin_bottom = 1020.0
+size_flags_vertical = 3
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="SearchResults" type="VBoxContainer" parent="TabContainer/Scene List/ScrollContainer"]
+unique_name_in_owner = true
+margin_right = 1912.0
+margin_bottom = 992.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Node Type" type="ScrollContainer" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+scroll_horizontal_enabled = false
+
+[node name="NodeTypeList" type="VBoxContainer" parent="TabContainer/Node Type"]
+unique_name_in_owner = true
+
+[node name="Search" type="Button" parent="."]
+margin_top = 1060.0
+margin_right = 1920.0
+margin_bottom = 1080.0
+text = "Search"

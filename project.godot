@@ -1,0 +1,350 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "AsyncResourceLoader",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/async_resource_loader.gd"
+}, {
+"base": "Reference",
+"class": "BatchIter",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/batch_iter.gd"
+}, {
+"base": "Reference",
+"class": "CellEditor",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/typed_cells/cell_editor.gd"
+}, {
+"base": "CellEditor",
+"class": "CellEditorArray",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/typed_cells/cell_editor_array.gd"
+}, {
+"base": "Polygon2D",
+"class": "CircleTool",
+"language": "GDScript",
+"path": "res://scripts/classes/Tools/CircleTool.gd"
+}, {
+"base": "CollisionPolygon2D",
+"class": "CollisionCircleTool",
+"language": "GDScript",
+"path": "res://scripts/classes/Tools/CircleToolCollision.gd"
+}, {
+"base": "Reference",
+"class": "Coroutine",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/coroutine.gd"
+}, {
+"base": "Reference",
+"class": "DelayedCallable",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/delayed_callable.gd"
+}, {
+"base": "Reference",
+"class": "DelayedResume",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/delayed_resume.gd"
+}, {
+"base": "Camera2D",
+"class": "DevCam",
+"language": "GDScript",
+"path": "res://scripts/classes/Nodes/DevCam.gd"
+}, {
+"base": "Reference",
+"class": "FrameCallable",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/frame_callable.gd"
+}, {
+"base": "Reference",
+"class": "FrameResume",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/frame_resume.gd"
+}, {
+"base": "Node",
+"class": "GSSH",
+"language": "GDScript",
+"path": "res://scripts/classes/Nodes/GSSH.gd"
+}, {
+"base": "Resource",
+"class": "GSSR",
+"language": "GDScript",
+"path": "res://scripts/classes/Resources/GSSR.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventMultiScreenDrag",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventMultiScreenDrag.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventMultiScreenLongPress",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventMultiScreenLongPress.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventMultiScreenSwipe",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventMultiScreenSwipe.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventMultiScreenTap",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventMultiScreenTap.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventScreenPinch",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventScreenPinch.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventScreenTwist",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventScreenTwist.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenDrag",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventSingleScreenDrag.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenLongPress",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventSingleScreenLongPress.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenSwipe",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventSingleScreenSwipe.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenTap",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventSingleScreenTap.gd"
+}, {
+"base": "InputEventAction",
+"class": "InputEventSingleScreenTouch",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/CustomInputEvents/InputEventSingleScreenTouch.gd"
+}, {
+"base": "PanelContainer",
+"class": "LogContainer",
+"language": "GDScript",
+"path": "res://addons/hyperlog/log_container.gd"
+}, {
+"base": "Node",
+"class": "Nylon",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/nylon.gd"
+}, {
+"base": "InputEventAction",
+"class": "RawGesture",
+"language": "GDScript",
+"path": "res://addons/GodotInputManager/RawGesture.gd"
+}, {
+"base": "GridContainer",
+"class": "SettingsGrid",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/settings_grid.gd"
+}, {
+"base": "Control",
+"class": "SheetsDockEditor",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/typed_editors/dock_base.gd"
+}, {
+"base": "Reference",
+"class": "Silk",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/silk.gd"
+}, {
+"base": "Reference",
+"class": "SpreadsheetEditFormat",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_edit/edit_base.gd"
+}, {
+"base": "SpreadsheetEditFormatTres",
+"class": "SpreadsheetEditFormatCsv",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_edit/edit_csv.gd"
+}, {
+"base": "SpreadsheetEditFormat",
+"class": "SpreadsheetEditFormatTres",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_edit/edit_tres.gd"
+}, {
+"base": "Reference",
+"class": "SpreadsheetExportFormatCsv",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_export/export_csv.gd"
+}, {
+"base": "Resource",
+"class": "SpreadsheetImport",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/spreadsheet_import.gd"
+}, {
+"base": "Reference",
+"class": "SpreadsheetImportFormatCsv",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_import/import_csv.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://scripts/classes/Nodes/State.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://scripts/classes/Nodes/StateMachine.gd"
+}, {
+"base": "Reference",
+"class": "TextEditingUtils",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/text_editing_utils.gd"
+}, {
+"base": "Button",
+"class": "ThemeIconButton",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/editor_icon_button.gd"
+}, {
+"base": "Control",
+"class": "ThemeStylebox",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/editor_stylebox_overrider.gd"
+}, {
+"base": "Reference",
+"class": "TimedIter",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/timed_iter.gd"
+}, {
+"base": "Reference",
+"class": "TimedResume",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/timed_resume.gd"
+}, {
+"base": "Control",
+"class": "Tracker",
+"language": "GDScript",
+"path": "res://addons/hyperlog/trackers/tracker.gd"
+}, {
+"base": "Tracker",
+"class": "TrackerAngle",
+"language": "GDScript",
+"path": "res://addons/hyperlog/trackers/tracker_angle.gd"
+}, {
+"base": "Tracker",
+"class": "TrackerBar",
+"language": "GDScript",
+"path": "res://addons/hyperlog/trackers/tracker_bar.gd"
+}, {
+"base": "Tracker",
+"class": "TrackerColor",
+"language": "GDScript",
+"path": "res://addons/hyperlog/trackers/tracker_color.gd"
+}, {
+"base": "Tracker",
+"class": "TrackerGraph",
+"language": "GDScript",
+"path": "res://addons/hyperlog/trackers/tracker_graph.gd"
+}, {
+"base": "Tracker",
+"class": "TrackerText",
+"language": "GDScript",
+"path": "res://addons/hyperlog/trackers/tracker_text.gd"
+}, {
+"base": "Resource",
+"class": "ValueTracker",
+"language": "GDScript",
+"path": "res://addons/hyperlog/value_tracker.gd"
+}, {
+"base": "Reference",
+"class": "WeakCallable",
+"language": "GDScript",
+"path": "res://addons/nylon/scripts/weak_callable.gd"
+} ]
+_global_script_class_icons={
+"AsyncResourceLoader": "",
+"BatchIter": "",
+"CellEditor": "",
+"CellEditorArray": "",
+"CircleTool": "",
+"CollisionCircleTool": "",
+"Coroutine": "",
+"DelayedCallable": "",
+"DelayedResume": "",
+"DevCam": "",
+"FrameCallable": "",
+"FrameResume": "",
+"GSSH": "",
+"GSSR": "",
+"InputEventMultiScreenDrag": "",
+"InputEventMultiScreenLongPress": "",
+"InputEventMultiScreenSwipe": "",
+"InputEventMultiScreenTap": "",
+"InputEventScreenPinch": "",
+"InputEventScreenTwist": "",
+"InputEventSingleScreenDrag": "",
+"InputEventSingleScreenLongPress": "",
+"InputEventSingleScreenSwipe": "",
+"InputEventSingleScreenTap": "",
+"InputEventSingleScreenTouch": "",
+"LogContainer": "",
+"Nylon": "",
+"RawGesture": "",
+"SettingsGrid": "",
+"SheetsDockEditor": "",
+"Silk": "",
+"SpreadsheetEditFormat": "",
+"SpreadsheetEditFormatCsv": "",
+"SpreadsheetEditFormatTres": "",
+"SpreadsheetExportFormatCsv": "",
+"SpreadsheetImport": "",
+"SpreadsheetImportFormatCsv": "",
+"State": "",
+"StateMachine": "",
+"TextEditingUtils": "",
+"ThemeIconButton": "",
+"ThemeStylebox": "",
+"TimedIter": "",
+"TimedResume": "",
+"Tracker": "",
+"TrackerAngle": "",
+"TrackerBar": "",
+"TrackerColor": "",
+"TrackerGraph": "",
+"TrackerText": "",
+"ValueTracker": "",
+"WeakCallable": ""
+}
+
+[application]
+
+config/name="ALLBOILERPLATE"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/NbPM/plugin.cfg", "res://addons/advanced_search/plugin.cfg", "res://addons/gdformat/plugin.cfg", "res://addons/imrp/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[mono]
+
+project/assembly_name="fire_simulation"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
