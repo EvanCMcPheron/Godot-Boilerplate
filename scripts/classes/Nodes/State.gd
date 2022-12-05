@@ -1,13 +1,14 @@
 class_name State
 extends Node
 
-func enter_state(from: State) -> void:
+func _enter_state(from: State) -> void:
 	pass
 
 
-func exit_state(to: State) -> void:
-	pass
+func _exit_state(to: State) -> void:
+	if to != null:
+		yield(get_tree().create_timer(0.0), "timeout")
 
 
-func update_state(delta: float) -> void:
+func _update_state(delta: float) -> void:
 	pass
